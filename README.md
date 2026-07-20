@@ -1,4 +1,7 @@
 # 💳 Loan Credit System
+<img width="1342" height="496" alt="image" src="https://github.com/user-attachments/assets/6fc6320a-e706-47b5-9418-31fa786437f5" />
+
+
 
 A web-based **Loan Credit System** built with **Django** that simplifies loan management by allowing users to apply for loans, track applications, and manage customer information through an intuitive interface.
 
