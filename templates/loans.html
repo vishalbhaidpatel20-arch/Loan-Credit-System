@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<section class="page-head">
+  <div class="container">
+    <h1>Our Loan Services</h1>
+    <p>Select the loan product and apply instantly.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="cards">
+      <div class="card">
+        <span class="badge">Popular</span>
+        <h3>Personal Loan</h3>
+        <p>Get quick personal loan for emergency, travel, medical, education.</p>
+        <br>
+        <a class="btn"  href="{% url 'personal' %}">View Details</a>
+      </div>
+
+      <div class="card">
+        <span class="badge">Business</span>
+        <h3>Business Loan</h3>
+        <p>Grow your business with quick credit and flexible repayment options.</p>
+        <br>
+        <a class="btn"  href="{% url 'base' %}">View Details</a>
+      </div>
+
+      <div class="card">
+        <span class="badge">Instant</span>
+        <h3>Short Term Loan</h3>
+        <p>Short duration loan for instant needs and small EMI.</p>
+        <br>
+        <a class="btn"  href="{% url 'apply' %}">Apply Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container copy">© 2026 Instant Loans. All Rights Reserved.</div>
+</footer>
+
+
+{% endblock %}

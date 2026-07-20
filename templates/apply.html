@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section class="page-head">
+  <div class="container">
+    <h1>Apply for Loan</h1>
+    <p>Fill the form and submit your loan request.</p>
+  </div>
+</section>
+
+<section class="section">
+<form action="{% url 'apply' %}" method="POST" enctype="multipart/form-data">
+  {% csrf_token %}
+ 
+  <div class="container">
+    <div class="hero-card">
+      <h3>Loan Application Form</h3>
+      
+      <div class="form-row">
+        <input type="text" name="name" placeholder="Full Name" required />
+        <input type="tel" name="number" placeholder="Mobile Number" required />
+      </div>
+      
+      <div class="form-row">
+        <input type="email" name="email" placeholder="Email" required />
+        <input type="text" name="PanNumber" placeholder="PAN Number" required />
+        <input type="text" name="employeStatus" placeholder="employeStatus" required />
+      </div>
+      
+      <div class="form-row">
+        <select required name="loan_type">
+          <option>Select Loan Type</option>
+          <option value="personal">Personal Loan</option>
+          <option value="business">Business Loan</option>
+          <option value="home">Short Term Loan</option>
+        </select>
+        <input type="number" name="loan_amount" placeholder="Loan Amount (₹)" required />
+        <input type="number" name="loan_duration" placeholder="Loan Duration In Months" required />
+      </div>
+      
+      <div class="form-row">
+        <input type="text" name="city" placeholder="City" required />
+        <input type="number" name="income" placeholder="Monthly Income (₹)" required />
+      </div>
+      
+      <textarea placeholder="Address" name="address" rows="3"></textarea>
+      <br><br>
+      
+      <button type="submit" class="btn" style="width:100%;">
+        Submit Application
+      </button>
+    </div>
+  </div>
+</form>
+</section>
+
+<footer class="footer">
+  <div class="container copy">© 2026 Instant Loans. All Rights Reserved.</div>
+</footer>
+
+
+{% endblock %}

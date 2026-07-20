@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+    <div class="card" style="max-width:500px; margin:auto; padding:20px;">
+
+        <h2>Edit Profile</h2>
+
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+
+            <!-- Profile Image -->
+            <div style="text-align:center; margin-bottom:15px;">
+                <img src="{{ profile.profile_pic.url }}" width="100" style="border-radius:50%;">
+            </div>
+
+            <label>Mobile Number</label>
+            <input type="text" name="mobile_no" value="{{ profile.mobile_no }}" class="form-control" required>
+
+            <label>Address</label>
+            <textarea name="address" class="form-control" required>{{ address }}</textarea>
+
+            <label>Profile Picture</label>
+            <input type="file" name="profile_pic">
+            <br>
+
+            <button type="submit" class="btn">Save Changes</button>
+        </form>
+
+    </div>
+</div>
+
+{% endblock %}

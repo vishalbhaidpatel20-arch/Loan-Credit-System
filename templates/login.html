@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<section class="page-head">
+  <div class="container">
+    <h1>Login</h1>
+    <p>Access your account to apply and track loan.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <form action="{% url 'login' %}" method="POST">
+      {% csrf_token %}
+      <div class="hero-card">
+        <h3>User Login</h3>
+        <input type="text" name="username" placeholder="Username" />
+        <br><br>
+        <input type="password" name="password" placeholder="Password" />
+        <br><br>
+        <p class="text-danger">{{error_msg}}</p>
+        <button class="btn" type="submit" style="width:100%;" >Login</button>
+      </form>
+        <p style="margin-top:10px;">New user? <a href="{% url 'signup' %}" style=color:#0a66ff;>Create Account</a></p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container copy">© 2026 Instant Loans. All Rights Reserved.</div>
+</footer>
+
+
+{% endblock %}

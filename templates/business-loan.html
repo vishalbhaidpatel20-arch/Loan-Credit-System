@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section class="page-head">
+  <div class="container">
+    <h1>Business Loan</h1>
+    <p>Support your business growth with instant credit.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="note">
+      <h3>Features</h3>
+      <ul style="margin-top:10px;line-height:2;">
+        <li>Loan Amount: ₹50,000 to ₹10,00,000</li>
+        <li>Tenure: 6 to 48 months</li>
+        <li>Fast processing & approval</li>
+        <li>Low interest rate options</li>
+      </ul>
+      <br>
+      <a class="btn" href="{% url 'apply' %}">Apply Business Loan</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container copy">© 2026 Instant Loans. All Rights Reserved.</div>
+</footer>
+
+
+{% endblock %}

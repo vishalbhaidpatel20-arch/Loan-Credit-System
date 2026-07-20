@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section class="page-head">
+  <div class="container">
+    <h1>Track Your Loan</h1>
+    <p>Enter Application ID to check status.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="hero-card">
+      <h3>Track Application</h3>
+      <input id="trackId" type="text" placeholder="Enter Application ID (Example: IL20261234)" />
+      <br><br>
+      <button class="btn" onclick="trackLoan()">Track</button>
+      <p id="trackResult" style="margin-top:15px;"></p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container copy">© 2026 Instant Loans. All Rights Reserved.</div>
+</footer>
+
+
+{% endblock %}

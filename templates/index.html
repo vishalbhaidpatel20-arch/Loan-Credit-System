@@ -1,0 +1,113 @@
+ 
+{% extends 'base.html' %}
+ 
+ {% block content %}
+    
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="badge">100% Online • Paperless • Fast Approval</span>
+      <h1>Get Instant Personal & Business Loans in Minutes</h1>
+      <p>
+        Instant Loans helps you apply online with minimal documents and quick verification.
+        Safe, secure and easy repayment options.
+      </p>
+      <a class="btn" href="{% url 'apply' %}">Apply Now</a>
+      <a class="btn btn-outline" href="{% url 'emi' %}">Calculate EMI</a>
+    </div>
+
+    <div class="hero-card">
+      <h3>Quick Eligibility Check</h3>
+      <div class="form-row">
+        <input type="text" placeholder="Full Name" />
+      </div>
+      <div class="form-row">
+        <input type="tel" placeholder="Mobile Number" />
+      </div>
+      <div class="form-row">
+        <select>
+          <option>Select Loan Type</option>
+          <option>Personal Loan</option>
+          <option>Business Loan</option>
+        </select>
+      </div>
+      <a class="btn" style="width:100%;" href="{% url 'apply' %}">Check & Apply</a>
+      <p style="margin-top:10px;color:#525151;font-size:13px;">
+        By continuing, you agree to our <a href="{% url 'terms' %}" style="color:#0a66ff;">Terms</a> & 
+        <a href="{% url 'privacy' %}" style="color:#0a66ff;">Privacy Policy</a>.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section"> 
+  <div class="container"> 
+    <h2>Why Choose Instant Loans?</h2>
+    <p class="sub">Trusted online loan platform for quick approval and flexible repayment.</p>
+
+    <div class="cards">
+      <div class="card">
+        <span class="badge">Fast</span>
+        <h3>Instant Approval</h3>
+        <p>Get approval quickly with digital verification process.</p>
+      </div>
+      <div class="card">
+        <span class="badge">Secure</span>
+        <h3>100% Safe</h3>
+        <p>Your data is encrypted and protected with secure systems.</p>
+      </div>
+      <div class="card">
+        <span class="badge">Easy</span>
+        <h3>Flexible EMI</h3>
+        <p>Choose repayment tenure that fits your monthly budget.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background: #92a2b9;;">
+  <div class="container">
+    <h2>How It Works</h2>
+    <p class="sub">Simple steps to get loan in minutes.</p>
+
+    <div class="steps">
+      <div class="step"><span>1</span><h3>Apply</h3><p>Fill simple online form.</p></div>
+      <div class="step"><span>2</span><h3>Verify</h3><p>Upload PAN/Aadhaar & selfie.</p></div>
+      <div class="step"><span>3</span><h3>Approval</h3><p>Quick eligibility decision.</p></div>
+      <div class="step"><span>4</span><h3>Disbursal</h3><p>Amount credited to bank.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <h3>Instant Loans</h3>
+      <p style="color:#cfe2ff;margin-top:10px;">
+        Instant Loans is a demo project website for online loan credit system.
+      </p>
+    </div>
+    <div>
+      <h4>Company</h4>
+      <p><a href="{% url 'about' %}">About</a></p>
+      <p><a href="{% url 'contact' %}">Contact</a></p>
+      <p><a href="{% url 'faq' %}">FAQ</a></p>
+    </div>
+    <div>
+      <h4>Services</h4>
+      <p><a href="{% url 'personal' %}">Personal Loan</a></p>
+      <p><a href="{% url 'base' %}">Business Loan</a></p>
+      <p><a href="{% url 'emi' %}">EMI Calculator</a></p>
+    </div>
+    <div>
+      <h4>Legal</h4>
+      <p><a href="{% url 'privacy' %}">Privacy Policy</a></p>
+      <p><a href="{% url 'terms' %}">Terms</a></p>
+    </div>
+  </div>
+  <div class="container copy">© 2026 Instant Loans. All Rights Reserved.</div>
+</footer>
+
+
+{% endblock %}

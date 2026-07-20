@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container" style="max-width:500px; margin:auto;">
+
+    <div class="card" style="padding:20px;">
+        <h2>Pay EMI</h2>
+
+        <p><b>Loan:</b> {{ emi.loan.loan_type }}</p>
+        <p><b>Installment:</b> #{{ emi.installment_number }}</p>
+        <p><b>Amount:</b> ₹{{ emi.amount }}</p>
+
+        <form method="POST" action="{% url 'pay_emi' emi.id %}">
+            {% csrf_token %}
+
+            <h4>Select Payment Method</h4>
+
+            <label>
+                <input type="radio" name="payment_method" value="upi" required>
+                UPI (Google Pay / PhonePe)
+            </label><br>
+
+            <label>
+                <input type="radio" name="payment_method" value="netbanking">
+                Net Banking
+            </label><br>
+
+            <label>
+                <input type="radio" name="payment_method" value="card">
+                Debit / Credit Card
+            </label><br><br>
+
+            <button type="submit" class="btn">Pay Now</button>
+        </form>
+    </div>
+
+</div>
+
+{% endblock %}

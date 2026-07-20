@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section class="page-head">
+  <div class="container">
+    <h1>Personal Loan</h1>
+    <p>Instant personal loan with minimum documents.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="note">
+      <h3>Features</h3>
+      <ul style="margin-top:10px;line-height:2;">
+        <li>Loan Amount: ₹10,000 to ₹5,00,000</li>
+        <li>Tenure: 3 to 36 months</li>
+        <li>Quick approval & fast disbursal</li>
+        <li>Paperless documentation</li>
+      </ul>
+      <br>
+      <a class="btn" href="{% url 'apply' %}">Apply Personal Loan</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container copy">© 2026 Instant Loans. All Rights Reserved.</div>
+</footer>
+
+
+{% endblock %}

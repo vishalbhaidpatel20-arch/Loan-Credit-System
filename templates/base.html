@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+
+    {% include 'navbar1.html' %}
+
+      <!--jyare kai vastu user ne dekhad vi hoy tyare aa use thay che -->
+
+     <!-- {% for obj in hello %} "hello e model na badha obj ne store kre che"        "   it is the for loop it is used to 1 task ne diffrent data sathe repeat krva mate thay che "
+                      
+                 <div class="box">                                  "">aa  veriable print krva mate use thay che
+                     <img src="{{ obj.image.url }}" alt="">   
+                     <h1>{{ obj.title }}</h1>
+                     <p>
+                         {{obj.des}}
+                     </p>
+                     <h3>Prince : {{obj.price}} </h3>
+                 </div>
+                 
+     {% endfor %} -->
+
+    {% block content %}
+    {% endblock %}
+    <script src="{% static 'script.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+        integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

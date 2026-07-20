@@ -1,0 +1,50 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<section class="page-head">
+  <div class="container">
+    <h1>Contact Us</h1>
+    <p>We are here to help you 24/7.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="cards">
+      <div class="card">
+        <h3>Email</h3>
+        <p>support@instantloans.com</p>
+      </div>
+      <div class="card">
+        <h3>Phone</h3>
+        <p>+91 99999 88888</p>
+      </div>
+      <div class="card">
+        <h3>Office</h3>
+        <p>Ahmedabad, Gujarat, India</p>
+      </div>
+    </div>
+
+    <br><br>
+    <div class="hero-card">
+      <h3>Send Message</h3>
+      <input type="text" placeholder="Your Name" />
+      <br><br>
+      <input type="email" placeholder="Your Email" />
+      <br><br>
+      <textarea rows="4" placeholder="Your Message"></textarea>
+      <br><br>
+      <button class="btn" onclick="alert('Message sent successfully (Demo)!')">Send</button>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container copy">© 2026 Instant Loans. All Rights Reserved.</div>
+</footer>
+
+
+  {% endblock %}
